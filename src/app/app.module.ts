@@ -1,16 +1,19 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpModule } from '@angular/http';
+import{ FormsModule} from '@angular/forms';
 
 import { AppComponent } from './app.component';
-
+import {StockListComponent}  from './stock-list/stock-list.component';
+import {StockListService} from './stock-list/stock-list.service';
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent, StockListComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule, HttpModule, FormsModule
   ],
-  providers: [],
+  providers: [StockListService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
